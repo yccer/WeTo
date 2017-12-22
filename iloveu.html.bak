@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Love between Us</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+
+<body>
+    <audio src="./music.mp3" autoplay="true" loop="loop"></audio>
+    <div id="back">
+        <div class="mask"></div>
+        <!-- 设置展示的图片，github pages不能有后台程序只能一条一条手动添加了 囧 -->
+        <div id="carousel"  class="carousel slide carousel-fade carousel-position">
+            <div class="carousel-inner" style="width: 100%;height: 100%;" id="background">
+                <div class="item active" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background:url(./img/timg.JPG);background-size: cover;"></div>
+                </div>
+				<div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/1.JPG) ;background-size: cover;"></div>
+                </div>
+                <div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/2.JPG) ;background-size: cover;"></div>
+                </div>
+                <div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/3.JPG) ;background-size: cover;"></div>
+                </div>
+                <div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/4.JPG) ;background-size: cover;"></div>
+                </div>
+                <div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/5.jpg);background-size: cover;"></div>
+                </div>
+                <div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/6.jpg);background-size: cover;"></div>
+                </div>
+                <div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/7.png);background-size: cover;"></div>
+                </div>
+                <div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/8.jpg);background-size: cover;"></div>
+                </div>
+                <div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/9.jpg);background-size: cover;"></div>
+                </div>
+                <div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/10.jpg);background-size: cover;"></div>
+                </div>
+                <div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/11.jpg);background-size: cover;"></div>
+                </div>
+				<div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/12.jpg);background-size: cover;"></div>
+                </div>
+                <div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/end.jpg);background-size: cover;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal show" style="top:24%;">
+        <div class="modal-dialog" style="opacity: .9">
+            <div class="modal-content" style="opacity:.50">
+                <div class="modal-header">
+                    <h1 class="text-center" style="color: #A94442;font-family: 'JournalRegular', Arial, sans-serif;font-size: 7rem;">the times we together</h1>
+                    <p class="text-center small-title">娟儿 & 有声彷无声</p>
+                    <p class="text-center small-title">LOVING ON THE WAY</p>
+                </div>
+                <div class="modal-body text-center" style="line-height: 1.5rem;font-family: 'JournalRegular', Arial, sans-serif;font-size: 3rem;">
+                    <p>
+                        <span id="day" class="time-font"></span><span style="color:#A94442">/&nbsp;</span><span id="hour" class="time-font"></span><span style="color:#A94442">/&nbsp;</span><span id="minute" class="time-font"></span><span style="color:#A94442">/&nbsp;</span><span id="second" class="time-font"></span>
+                    </p>
+                    <p>
+                        days/hours/min/sec
+                    </p>
+                    <p class="text-center" style="color:#A94442;font-family: Arial,'Microsoft YaHei',sans-serif;font-size: 14px" id="say"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./js/jquery-1.12.2.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/count-time.js"></script>
+    <script>
+    $(function() {
+        //设置起始日期
+        countTime('2015/07/26 16:07', 'day', 'hour', 'minute', 'second');
+        var days = $('#day').text();
+
+        // 设置标题
+        if (parseInt(days / 365) != 0) {
+            $(document).attr("title", "在一起" + parseInt(days / 365) + "年,感谢相伴。");
+        } else if (parseInt(days / 30) != 0) {
+            $(document).attr("title", "在一起" + parseInt(days / 30) + "个月,感谢相伴。");
+        } else
+            $(document).attr("title", "在一起" + days + "天,感谢相伴。");
+
+        //设置每一张图片对应的文字
+        var says = new Array(
+            "一路相伴,感谢有你",
+			"粥鼎记，记得老远看你的兔耳朵，心里一直想笑，看你一脸严肃的样子还是挺害怕的！",
+            "贵妇人，哈哈，那发型真的让你姿色增添不少！",
+            "梁记粥铺。 总算只有我们两个人了，不容易，看你一直玩手机还是挺失落！",
+            "中百麻辣香锅，姐妹俩真是很像啊，哈哈,食力战将非你们俩莫属！",
+            "家。 一个人真是想你！",
+            "已经感觉到了，你对我不满意了，可是我还是傻傻的给你炫耀我的棒棒糖，不久就各走各路了！虽然还是想你了好久！",
+            "一月六，你竟然找我了，我挺慌张的，一月十三。 过年做的指甲，那天真是第一次夸我，感觉你变温柔了！",
+            "哈哈，第一次同框，希望永远框在一起，不离不弃",
+            "生日快乐，发现你厨艺不错，有赶上我老妈的实力，感觉以后可以取代我妈的地位了，幸福！",
+            "520。哈哈又露了一手，嗯，撑死了。我爱你！",
+            "送我的照片，我一定珍藏，你竟然不认为这是你最漂亮的！不过在我心里怎么样你都是最美的。",
+			"这亲密付开通了，稍微可以养你一下下了！想吃啥尽管买！",
+            "戛然而止，我真不是诚心的。心里的压力和苦太多！虽然我没有挽回过来。真的对不起你，好爱好爱你！"
+        );
+
+
+        var start = function() {
+            var index = 0;
+            var rate = 6000;
+            $('#say').text(says[(index++) % says.length]);
+         	var _play = function () {
+         		$('#say').hide();
+                $('#say').text(says[(index++) % says.length]);
+                $('#say').fadeToggle();
+                $('#carousel').carousel('next');
+         	};
+            setInterval(_play, rate);
+        }();
+
+    });
+    </script>
+</body>
+
+</html>
