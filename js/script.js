@@ -5,38 +5,31 @@
 		continous = true,
 		autoplay = true,
 		playlist = [
-		{
-title: '海龟先生 - 男孩别哭.mp3',
-artist: '海龟先生',
-album: '男孩别哭',
-cover:'playpic/男孩别哭.png',
-mp3: 'music/海龟先生 - 男孩别哭.mp3',
-ogg: ''
-},
-{
-title: '李健 - 假如爱有天意',
-artist: '李健',
-album: '电影《太平轮·彼岸》推广曲',
-cover: 'playpic/加入爱有天意.jpg',
-mp3: 'music/李健 - 假如爱有天意.mp3',
-ogg: ''
-},
-{
-title: '赵雷 - 静下来.mp3',
-artist: '赵雷',
-album: '静下来',
-cover: 'playpic/静下来.jpg',
-mp3: 'music/赵雷 - 静下来.mp3',
-ogg: ''
-},
-{
-title: '张赫宣 - 我们不该这样的.mp3',
-artist: '张赫宣',
-album: '北上广不相信眼泪 电视原声带',
-cover: 'playpic/我们不该这样的.jpg',
-mp3: 'music/张赫宣 - 我们不该这样的.mp3',
-ogg: ''
-},];
+			{
+			title: '李健 - 假如爱有天意',
+			artist: '李健',
+			album: '电影《太平轮·彼岸》推广曲',
+			cover: 'playpic/加入爱有天意.jpg',
+			mp3: 'music/李健 - 假如爱有天意.mp3',
+			ogg: ''
+			},
+			
+			{
+			title: '张赫宣 - 我们不该这样的.mp3',
+			artist: '张赫宣',
+			album: '北上广不相信眼泪 电视原声带',
+			cover: 'playpic/我们不该这样的.jpg',
+			mp3: 'music/张赫宣 - 我们不该这样的.mp3',
+			ogg: ''
+			},
+		    {
+			title: '赵雷 - 静下来.mp3',
+			artist: '赵雷',
+			album: '静下来',
+			cover: 'playpic/静下来.jpg',
+			mp3: 'music/赵雷 - 静下来.mp3',
+			ogg: ''
+			},];
 
 	// Load playlist
 	for (var i=0; i<playlist.length; i++){
